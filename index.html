@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo app</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="parent-div">
+      <div id="child-divFirst">
+        <div class="sub-divFirst" id="date">
+          <p></p>
+        </div>
+        <div class="sub-divFirst" id="time">
+           <p></p>
+        </div>
+
+      </div>
+ 
+
+      <div id="child-div">
+        <p id="child-para">To Do List</p>
+        <form action="">
+          <input
+            type="text"
+            value=""
+            placeholder="Enter your To Do here."
+            id="form-input"
+          />
+          <div id="form-div">
+            <img
+              src="Images/plus.png"
+              alt="No image"
+              srcset=""
+              style="height: 100%"
+              id="plus-icon"
+            />
+          </div>
+        </form>
+        <div id="parent-divSecond">
+        
+        </div>
+        
+           
+        <div id="Additional-div" style="display: none;">
+          <section class="sub-divs" id="section-box" style="z-index: 3;">
+            <span class="divs-input"></span>
+            <p class="divs-para"></p>
+          </section>
+          <img src="Images/bin.png" alt="" class="bin-img" />
+        <div>
+      </div>
+    
+    </div>
+
+
+    <script src="index.js"></script>
+    <button id="clearData" >Clear</button>
+  </body>
+</html>
+<script>
+  let getButton=document.getElementById("clearData");
+getButton.addEventListener("click",function(){
+  localStorage.clear();
+  setTimeout(() => {
+    location.reload()
+  }, 500);
+});
+</script>
